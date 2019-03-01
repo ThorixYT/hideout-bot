@@ -16,10 +16,10 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith('.hello'):
         msg = 'Hello (0.author.mention) How Are You Today'.format(message)
-        awiat client.send_message(message.channel, msg)
+        await client.send_message(message.channel, msg)
     if message.content.startswith('.bye'):
         msg = 'Goodbye (0.author.mention) Hope To See You Again Soon :wave:'.format(message)
-        awiat client.send_message(message.channel, msg)
+        await client.send_message(message.channel, msg)
 
 client.run(os.getenv('TOKEN'))
                       
